@@ -10,21 +10,20 @@ document.addEventListener("DOMContentLoaded", function () {
   var modalImg = document.getElementById("modalImage");
 
   // Function to change the modal image
-// Function to change the modal image
-function changeImage(imageUrl) {
-  modalImg.src = imageUrl;
-}
+  function changeImage(imageUrl) {
+    modalImg.src = imageUrl;
+  }
 
-// Show the modal with the clicked image
-img.forEach(function (image) {
-  image.onclick = function () {
-    modal.style.display = "block";
-    changeImage(this.dataset.imageUrl);
-    currentIndex = Array.from(galleryItems).findIndex(
-      (item) => item.dataset.imageUrl === this.dataset.imageUrl
-    );
-  };
-});
+  // Show the modal with the clicked image
+  img.forEach(function (image) {
+    image.onclick = function () {
+      modal.style.display = "block";
+      changeImage(this.dataset.imageUrl);
+      currentIndex = Array.from(galleryItems).findIndex(
+        (item) => item.dataset.imageUrl === this.dataset.imageUrl
+      );
+    };
+  });
 
   // Get the array of gallery items
   galleryItems = document.querySelectorAll(".modal-trigger");

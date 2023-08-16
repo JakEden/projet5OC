@@ -92,6 +92,7 @@ body {
 }
 
 .gallery {
+	
 	width: 100%;
 	display: flex;
 	align-items: flex-start;
@@ -100,10 +101,13 @@ body {
 
 }
 .gallery-item {
-	flex: 0 0 calc(33.33% - 15px); 
-	max-width: calc(33.33% - 15px); 
-	height: auto; 
+
+	width: calc(33.33% - 15px); /* Divide by the number of items you want per row */
+	height: 440px;
+	margin-bottom: 15px; /* Add margin for spacing */
+	object-fit: cover;
   }
+
 
 .modal {
 	display: none;
